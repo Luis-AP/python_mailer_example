@@ -10,6 +10,6 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-## Desarrolladores
+## Colaboradores
 
 - [Luis Augusto Parada](https://github.com/Luis-AP)
