@@ -3,6 +3,16 @@ from google_email.email_message import EmailMessage
 from google_email.email_client import EmailClient
 
 
+def main():
+    client = EmailReceiver()
+    limit = int(input("Ingrese el número de correos a recibir: "))
+    emails = client.fetch_emails(limit)
+    for email in emails:
+        print(f"De: {email['from']}")
+        print(f"Asunto: {email['subject']}")
+        print(f"Mensaje: {email['body']}\n\n")
+
+
 def send_email():
     recipient = input("Ingrese el correo electrónico del destinatario: ")
     subject = input("Ingrese el asunto del correo: ")
