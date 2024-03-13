@@ -20,6 +20,7 @@ def send_email():
 
     message = EmailMessage(recipient, subject, body)
     client = EmailClient()
+    print("Enviando correo...")
     client.send_email(message)
     print("Correo enviado exitosamente.")
 
@@ -27,6 +28,7 @@ def send_email():
 def receive_emails(limit):
     receiver = EmailReceiver()
     try:
+        print("Buscando correos...")
         emails = receiver.fetch_emails(limit)
         for email in emails:
             print(f"De: {email['from']}")
