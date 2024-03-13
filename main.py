@@ -28,7 +28,7 @@ def send_email():
 def receive_emails(limit):
     receiver = EmailReceiver()
     try:
-        print("Buscando correos...")
+        print("Buscando correos en la bandeja de entrada (inbox)...")
         emails = receiver.fetch_emails(limit)
         for email in emails:
             print(f"De: {email['from']}")
